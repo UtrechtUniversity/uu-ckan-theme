@@ -1,11 +1,10 @@
-# CD² CKAN theme
+# UU CKAN theme
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
     
-CKAN theme for the CD² metadata portal (cloned from [ckanext-dia_theme](https://github.com/data-govt-nz/ckanext-dia_theme))
+CKAN theme for the UU CKAN metadata portal (cloned from cd2 theme **insert link** [ckanext-dia_theme](https://github.com/data-govt-nz/ckanext-dia_theme))
 
-![Screenshot](https://github.com/UtrechtUniversity/ckanext-cd2_theme/blob/main/ckanext/cd2_theme/public/img/screenshot.png?raw=true)
-
+**add screenshot**
 
 ## Requirements
 
@@ -38,6 +37,8 @@ To install the theme in an existing environment:
 
 ## CSS Styling
 
+**adapt to UU css file**
+
 Any CSS styling changes should be done in the LESS files and NOT directly in the CSS files. Edit the LESS files and compile to CSS using a LESS compiler, i.e.:
 
     npm install -g less
@@ -47,9 +48,11 @@ Any CSS styling changes should be done in the LESS files and NOT directly in the
 ## Updating and testing
 
 Configuration of SOLR, schemas, facets and images is done via [cd2-config](https://github.com/UtrechtUniversity/cd2-config)
-
+**->> to be changed to UU config**
 
 ## Specific CD² configurations
+
+**->> also be changed/adjusted/merged**
 
 The theme contains functionality with several references to specific elements of the CD² meta-data schema, which may cause issues with broader usage. The following pages contain direct references to the CD² meta-data schema, through either explicit HTML references or API calls.
  
