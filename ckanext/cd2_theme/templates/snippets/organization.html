@@ -1,0 +1,68 @@
+{% ckan_extends %}
+
+{% block info %}
+  <div class="module module-narrow module-shallow context-info" style="background-color:#fff">
+    {% if has_context_title %}
+    {% endif %}
+    <section class="module-content">
+      {% block inner %}
+      {% block image %}
+        <div class="image">
+          <a href="{{ url }}">
+            <img src="{{ organization.image_display_url or h.url_for_static('/base/images/placeholder-organization.png') }}" width="200" alt="{{ organization.name }}" />
+          </a>
+        </div>
+      {% endblock %}
+      {% block heading %}
+      {% endblock %}
+      {% block description %}
+      {% if organization.description %}
+        <p class="description" style="display:none">
+          {{ h.markdown_extract(organization.description, 180) }}
+        </p>
+        <p class="read-more" style="display:none">
+          {% link_for _('read more'), named_route=organization.type ~ '.about', id=organization.name %}
+        </p>
+      {% else %}
+        <p class="empty">{{ 'There is no description for this organization' }}</p>
+      {% endif %}
+      {% endblock %}
+      <div class="similar-datasets module-additional dropshadow">
+        <h1 aria-controls="similar-datasets" class="heading dropshadow"><span class="fa fa-copy"></span> Similar datasets</h1>
+        <div id="similar-datasets" style="padding:10px"></div>
+      </div>
+      
+      <div class="data-access module-additional dropshadow">
+      <h1 class="heading dropshadow"><span class="fa fa-download"></span> Data access</h1>
+      <dl id="data-access-panel" class="scheming-subfield-list">
+          <div class="panel-body" style="font-size:13px">
+            <dd><span class="tabspan fa fa-question-circle"></span> 
+            <span id="data-access-info"></span>
+            </dd><dd>
+            <span class="data-access-href" id="data-access-href"></span>
+            </dd>
+        </div></dl>
+    </div>
+      
+
+      {% block nums %}
+      <a href="/dataset/?organization={{organization.name}}&amp;dataset_type=dataset"><div class="nums" id="block_nums" style="display:none">
+        <dl>
+          <dt>Datasets</dt>
+          <script>
+          url = '/api/3/action/package_search?q=organization:{{organization.name}}&fq=dataset_type:dataset'
+          fetch(url)
+            .then(res => res.json())
+            .then(data => {
+              var div = document.getElementById('nums');
+              div.innerHTML = data.result.count;
+            });
+          </script>
+          <dd id="nums"></dd>
+        </dl>
+      </div></a>
+      {% endblock %}
+    {% endblock %}
+    </section>
+  </div>
+  {% endblock %}

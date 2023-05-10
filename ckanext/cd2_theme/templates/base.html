@@ -1,0 +1,17 @@
+{% ckan_extends %}
+
+{% block styles %}
+{{ super() }}
+
+{% asset 'cd2_theme/rua_style' %}
+{% asset 'cd2_theme/dia_style' %}
+
+{% endblock %}
+
+{% block scripts %}
+{% asset 'cd2_theme/cd2_script' %}
+{% asset 'cd2_theme/dia_script' %}
+{% asset 'cd2_theme/rua_script' %}
+{{ super() }}
+
+{% endblock scripts %}

@@ -1,0 +1,109 @@
+<footer class="site-footer">
+	<div class="site-footer__style-1"></div>
+	<div class="site-footer__navigation">
+		<div class="site-footer__inner">
+			<div class="site-footer__col-1">
+				<h2>
+					What are you looking for?
+				</h2>
+				<hr class="margin-t-sm margin-b-sm">
+				<ul class="menu vertical md-2-column site-footer__menu">
+					<li>
+						<a href="{{ h.parent_site_url() }}/" class="link">
+							Home
+						</a>
+					</li>
+
+					<li>
+						<a href="/dataset/?dataset_type=dataset" class="link">
+							Get datasets
+						</a>
+					</li>
+
+					<li>
+						<a href="/pages/catalogue-guide" class="link">
+							Catalogue guide
+						</a>
+					</li>
+
+					<li>
+						<a href="/pages/about" class="link">
+							About
+						</a>
+					</li>
+				</ul>
+				
+			</div>
+			<div class="site-footer__col-1">
+				<h2>
+					Using this website
+				</h2>
+				<hr class="margin-t-sm margin-b-sm">
+				<ul class="menu vertical site-footer__menu">
+					<li>
+						<a href="{{ h.parent_site_url() }}/terms-of-use" class="link">
+							Terms of use
+						</a>
+					</li>
+
+					<li>
+						<a href="{{ h.parent_site_url() }}/privacy-policy" class="link">
+							Privacy policy
+						</a>
+					</li>
+
+					<li>
+						<a href="/user/login" class="link">
+							Researcher login
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="site-footer__col-1">
+				<h2>
+					Get in touch
+				</h2>
+				<hr class="margin-t-sm margin-b-sm">
+				<ul class="menu vertical site-footer__menu">
+					<li>
+						<a href="{{ h.parent_site_url() }}/contact-us" class="link">
+							Contact us
+						</a>
+					</li>
+
+					<li>
+						<a href="https://github.com/utrechtUniversity/cd2-ckan-theme" class="link" target="_blank">
+							Github
+						</a>
+					</li>
+
+					<li>
+						<a href="{{ h.parent_site_url() }}/request-data" class="link">
+							Request data
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="site-footer__bottom" style="">
+		<span class="footer-text" style="padding:10px;float:left;">CD<sup>2</sup> is funded by .. under grant ...
+		</span>
+		<span class="footer-text" style="padding:10px;float:right;"><a href="https://ckan.org/" target="blank">powered by CKAN</a>
+		</span>
+	</div>
+
+	{% block footer_debug %}
+		{% if g.debug %}
+			{% include 'snippets/debug.html' %}
+		{% endif %}
+	{% endblock %}
+</footer>
+<script>
+	document.addEventListener("DOMContentLoaded", function (event) {
+	  // exception for user pages to fade in menu bar
+	  if ((window.location.href.indexOf('/user/') > -1)  || (window.location.href.indexOf('/ckan-admin/') > -1)) {
+		$('.nav-tabs').fadeTo(100, 1);
+	  }
+	});
+</script>
