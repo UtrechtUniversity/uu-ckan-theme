@@ -11,7 +11,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='''ckanext-cd2_theme''',
+    name='''ckanext-uu-ckan-theme''',
 
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
@@ -22,10 +22,10 @@ setup(
     long_description=long_description,
 
     # The project's main homepage.
-    url='https://github.com/UtrechtUniversity/ckanext-cd2_theme',
+    url='https://github.com/UtrechtUniversity/uu-ckan-theme',
 
     # Author details
-    author='''CD2''',
+    author='''Utrecht University''',
     author_email='''p.pas@uu.nl''',
 
     # Choose your license
@@ -80,7 +80,7 @@ setup(
     # pip to create the appropriate form of executable for the target platform.
     entry_points='''
         [ckan.plugins]
-        cd2_theme=ckanext.cd2_theme.plugin:CD2_ThemePlugin
+        uu-ckan-theme=ckanext.uu-ckan-theme.plugin:UU_CKAN_ThemePlugin
         [babel.extractors]
         ckan = ckan.lib.extract:extract_ckan
     ''',
