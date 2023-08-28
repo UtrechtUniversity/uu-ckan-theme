@@ -1,5 +1,5 @@
 /**  
- * Custom CD2 js
+ * Custom UU js
  * 
  */
 
