@@ -22,7 +22,7 @@ setup(
     long_description=long_description,
 
     # The project's main homepage.
-    url='https://github.com/nehamoopen/uu-ckan-theme',
+    url='https://github.com/UtrechtUniversity/uu-ckan-theme',
 
     # Author details
     author='''UU''',
