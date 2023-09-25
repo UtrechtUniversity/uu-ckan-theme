@@ -1,7 +1,7 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 
-from ckanext.uu-ckan-theme import helpers
+from ckanext.uu_ckan_theme import helpers
 
 class UU_ThemePlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
@@ -11,7 +11,7 @@ class UU_ThemePlugin(plugins.SingletonPlugin):
     def update_config(self, config_):
         toolkit.add_template_directory(config_, '../templates')
         toolkit.add_public_directory(config_, '../public')
-        toolkit.add_resource('../fanstatic', 'uu-ckan-theme')
+        toolkit.add_resource('../fanstatic', 'uu_ckan_theme')
 
     # ITemplateHelpers
 
