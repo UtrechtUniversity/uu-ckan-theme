@@ -1,25 +1,25 @@
 rua_script:
-  output: uu-ckan-theme/rua.js
+  output: uu_ckan_theme/rua.js
   contents:
     - rua/js/rua.js
 
 rua_style:
-  output: uu-ckan-theme/rua.css
+  output: uu_ckan_theme/rua.css
   contents:
     - rua/css/rua-font.css
     - rua/css/rua.css
 
 dia_script:
-  output: uu-ckan-theme/dia_custom.js
+  output: uu_ckan_theme/dia_custom.js
   contents:
     - dia_custom.js
 
 dia_style:
-  output: uu-ckan-theme/uu-ckan-custom.css
+  output: uu_ckan_theme/uu-ckan-custom.css
   contents:
     - uu-ckan-custom.css
 
 uu-ckan-script:
-  output: uu-ckan-theme/uu-ckan-custom.js
+  output: uu_ckan_theme/uu-ckan-custom.js
   contents:
     - uu-ckan-custom.js
